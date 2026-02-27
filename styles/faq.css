@@ -1,0 +1,80 @@
+/* Container do botão e caixa FAQ, fixo no canto inferior direito */
+.faq-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+/* Botão redondo de FAQ */
+.faq-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
+  background: #0d6efd;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq-button:hover {
+  transform: scale(1.1);
+}
+
+/* Caixa de perguntas e respostas do FAQ */
+.faq-box {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 300px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.faq-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Botão de pergunta do FAQ */
+.faq-question {
+  width: 100%;
+  background: #f8f9fa;
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.faq-question:hover {
+  background: #e9ecef;
+}
+
+/* Resposta da pergunta do FAQ (expande/fecha) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+/* Resposta aberta */
+.faq-answer.open {
+  max-height: 120px;
+  margin-bottom: 10px;
+}
