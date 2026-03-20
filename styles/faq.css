@@ -33,7 +33,7 @@
   background: white;
   border-radius: 14px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  padding: 18px;
+  padding: 15px;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
