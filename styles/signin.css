@@ -45,6 +45,35 @@ body {
 
 .form-control {
   margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+#input-email{
+  margin-bottom: 30px;
+}
+
+.fa-eye { 
+    cursor: pointer;
+    font-size: 20px;
+    color: #808080;
+}
+
+.fa-eye-slash {
+    cursor: pointer;
+    font-size: 20px;
+    color: #808080;
+    display: none; /* inicialmente escondido */
+}
+
+.eye-box {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input.form-control:focus {
@@ -92,3 +121,19 @@ input.form-control:focus {
   color: #ffff; 
   font-weight: 500;
 }
+
+@keyframes cairNotificacao {
+  0% {
+    transform: translate(-50%, -80px); /*50% centraliza na horizontal, -80% joga pra cima (fora da posição)*/
+    opacity: 0; /*Deixa invisível*/
+  }
+  70% {
+    transform: translate(-50%, 10px); /* leve bounce */
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+

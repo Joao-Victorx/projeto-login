@@ -4,12 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Hugo 0.84.0" />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>Tela de Login</title>
 
     <!-- Link para o CSS do Bootstrap 5.3.8 -->
@@ -31,11 +26,16 @@
 
     <!-- Estilos personalizados para este modelo -->
     <link href="./styles/signin.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body class="text-center">
     <!-- Área principal do formulário de login -->
     <main class="form-signin">
-      <form>
+      <form name="formLogin">
         <!-- Logo do sistema -->
         <img
           class="logo-image"
@@ -50,35 +50,41 @@
         <!-- Campo de e-mail -->
         <div class="form-floating">
           <input
+            name="email"
             type="email"
             class="form-control"
-            id="floatingInput"
+            id="input-email"
             placeholder="name@example.com"
           />
-          <!-- Caixa de texto para o usuário inserir o endereço de e-mail -->
           <label for="floatingInput">Endereço de E-mail</label>
         </div>
         <!-- Campo de senha -->
         <div class="form-floating">
           <input
+            name="password"
             type="password"
             class="form-control"
-            id="floatingPassword"
+            id="input-password"
             placeholder="Password"
           />
-          <!-- Caixa de texto para o usuário inserir a senha -->
           <label for="floatingPassword">Senha</label>
+          <span class="eye-box">
+            <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
+          </span>
         </div>
 
         <!-- Checkbox "Lembre-me" -->
         <div class="checkbox-remember-login">
-          <input id="remember-me" type="checkbox"/> 
+          <input id="remember-me" type="checkbox" />
           <span>Lembre-Me</span>
         </div>
         <!-- Botão para entrar na tela de login -->
-        <button class="w-100 btn btn-lg btn-primary" type="#">
-          Entrar
-        </button>
+        <input
+          type="button"
+          class="w-100 btn btn-lg btn-primary"
+          value="Entrar"
+          onclick="validacao()"
+        />
         <p class="text-muted"><span>&copy; 2026</span></p>
       </form>
 
@@ -147,8 +153,10 @@
     </main>
   </body>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
   <script src="./js/faq.js"></script>
-
+  <script src="./js/formulario.js"></script>
 </html>
 
 <!-- Atalho para comentario: Segure o Crtl e clica no K, depois clique no C -->
