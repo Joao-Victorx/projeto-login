@@ -22,6 +22,14 @@ body {
   background-size: cover; /* faz a imagem cobrir toda a tela */
 }
 
+.form-container{
+  background-color: rgba(0, 0, 0, 0.5); /* fundo preto com opacidade */
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  transform: translate(-13%, 0%);
+}
+
 .logo-image{
   border-radius: 15px; 
   cursor: pointer; 
@@ -82,13 +90,17 @@ input.form-control:focus {
   border-color: #e6e6e6; 
 }
 
+.container-checkbox {
+  display: flex;
+  justify-content: space-around; /* espaça checkbox e link de recuperação */
+}
+
 .checkbox-remember-login{
   color: #ffff;
   display: flex;
   justify-content: center;
   align-items: center; /* alinha checkbox e texto na mesma linha */
   gap: 6px; /* espaço entre checkbox e texto */
-  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -98,9 +110,13 @@ input.form-control:focus {
   cursor: pointer;  
 }
 
-.checkbox-remember-login span {
-  font-weight: 500;
-  margin-right: 10px;
+.recover-password a{
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+.recover-password a:hover {
+  text-decoration: underline;
 }
 
 .btn-primary {

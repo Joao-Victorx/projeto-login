@@ -27,6 +27,7 @@ function validacao() {
     });
     $("#input-email").val(""); 
     $("#input-password").val("");
+    $("#remember-me").prop("checked", false);
     return false;
   }
 }

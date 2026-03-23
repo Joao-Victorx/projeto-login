@@ -35,7 +35,7 @@
   <body class="text-center">
     <!-- Área principal do formulário de login -->
     <main class="form-signin">
-      <form name="formLogin">
+      <form class="form-container" name="formLogin">
         <!-- Logo do sistema -->
         <img
           class="logo-image"
@@ -74,10 +74,14 @@
         </div>
 
         <!-- Checkbox "Lembre-me" -->
-        <div class="checkbox-remember-login">
-          <input id="remember-me" type="checkbox" />
-          <span>Lembre-Me</span>
-          <span><a href="#">Esqueci minha senha</a></span>
+        <div class="container-checkbox">
+          <div class="checkbox-remember-login">
+            <input id="remember-me" type="checkbox" />
+            <span>Lembre-Me</span>
+          </div>
+          <div class="recover-password">
+            <span><a href="#">Esqueci minha senha</a></span>
+          </div>
         </div>
         <!-- Botão para validar os campos -->
         <input
