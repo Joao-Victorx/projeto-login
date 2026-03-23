@@ -7,18 +7,16 @@ function validacao() {
       style: "custom-error",
       className: "error",
       autoHide: true,
-      autoHideDelay: 3000,
+      autoHideDelay: 2000,
     });
-    formLogin.email.focus();
     return false;
   } else if (password.trim() === "") {
     $("#input-password").notify("Insira sua Senha", {
       style: "custom-error",
       className: "error",
       autoHide: true,
-      autoHideDelay: 3000,
+      autoHideDelay: 2000,
     });
-    formLogin.password.focus();
     return false;
   } else if (email.trim() === "joao@gmail.com" && password.trim() === "1") {
     $.notify("Login Realizado com Sucesso!", {
@@ -27,6 +25,9 @@ function validacao() {
       autoHide: true,
       autoHideDelay: 2000,
     });
+    $("#input-email").val(""); 
+    $("#input-password").val("");
+    return false;
   }
 }
 

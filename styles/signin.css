@@ -88,7 +88,6 @@ input.form-control:focus {
   justify-content: center;
   align-items: center; /* alinha checkbox e texto na mesma linha */
   gap: 6px; /* espaço entre checkbox e texto */
-  width: 40%;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -101,6 +100,7 @@ input.form-control:focus {
 
 .checkbox-remember-login span {
   font-weight: 500;
+  margin-right: 10px;
 }
 
 .btn-primary {
