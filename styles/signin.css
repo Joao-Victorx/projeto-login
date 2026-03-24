@@ -124,6 +124,7 @@ input.form-control:focus {
 .btn-primary {
   font-weight: 500;
   transition: 0.2s; /* transição suave para hover */
+  margin-top: 10px;
 }
 
 .btn-primary:hover {
@@ -132,7 +133,7 @@ input.form-control:focus {
 }
 
 .text-muted{
-  margin: 50px 0 30px 0;
+  margin: 30px 0 30px 0;
 }
 
 .text-muted span {
