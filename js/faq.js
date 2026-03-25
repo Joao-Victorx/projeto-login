@@ -1,36 +1,35 @@
-// Mostra ou esconde a caixa de FAQ
-// Esta função é chamada quando o usuário clica no botão de FAQ.
-// Ela alterna a classe "show" na caixa de FAQ, o que faz com que ela seja exibida ou escondida.
+// Alterna a visibilidade da caixa de FAQ
+// Adiciona/remove a classe "show" no elemento #faqBox
 function toggleFAQ() {
-  // Obtém o elemento da caixa de FAQ pelo ID "faqBox"
-  // Alterna a classe "show" para mostrar ou esconder a caixa
   document.getElementById("faqBox").classList.toggle("show");
 }
 
-// Expande ou recolhe a resposta da pergunta clicada
-// Esta função é chamada quando o usuário clica em um botão de pergunta.
-// Ela alterna a classe "open" na resposta correspondente, o que faz com que ela seja exibida ou escondida.
+// Expande ou recolhe um item específico do FAQ
+// Recebe o botão clicado e atua na resposta logo abaixo dele
 function toggleItem(button) {
-  // Obtém o elemento da resposta que está logo após o botão clicado
+  // nextElementSibling pega o próximo elemento irmão (a resposta)
   const answer = button.nextElementSibling;
-  // Alterna a classe "open" na resposta para mostrar ou esconder
+
+  // Alterna a classe "open" para mostrar/esconder a resposta
   answer.classList.toggle("open");
 }
 
-// Fecha o FAQ ao clicar fora da caixa
-// Adiciona um ouvinte de evento para o documento inteiro
-// O evento 'mousedown' é disparado quando o usuário pressiona qualquer botão do mouse
-// Isso permite detectar cliques em qualquer lugar da página
+// Fecha o FAQ ao clicar fora dele
+// Listener global para detectar cliques em qualquer área da página
 document.addEventListener("mousedown", function (event) {
-  // Seleciona a caixa do FAQ pelo ID
+  // Seleciona a caixa do FAQ
   const faqBox = document.getElementById("faqBox");
-  // Seleciona o botão de abrir FAQ pela classe
+
+  // Seleciona o botão que abre o FAQ
   const faqButton = document.querySelector(".faq-button");
-  // Verifica se a caixa do FAQ está visível (classe 'show' presente)
+
+  // Verifica se o FAQ existe e está visível (tem a classe "show")
   if (faqBox && faqBox.classList.contains("show")) {
-    // Se o clique NÃO foi dentro da caixa do FAQ e nem no botão do FAQ
+    // Verifica se o clique foi FORA:
+    // - da caixa do FAQ
+    // - do botão que abre o FAQ
     if (!faqBox.contains(event.target) && !faqButton.contains(event.target)) {
-      // Remove a classe 'show' para esconder a caixa do FAQ
+      // Remove a classe para fechar o FAQ
       faqBox.classList.remove("show");
     }
   }

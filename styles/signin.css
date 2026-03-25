@@ -1,158 +1,169 @@
-/*Comentário aqui dentro - Para CSS*/
+/* Comentário padrão em CSS */
 
+/* Responsividade: aplica estilos apenas em telas > 768px */
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* aumenta tamanho do texto/imagem */
   }
 }
 
+/* Garante que HTML e BODY ocupem 100% da altura da tela */
 html,
 body {
   height: 100%;
 }
 
+/* Estilo base do body */
 body {
   display: flex;
-  align-items: center;
+  align-items: center; /* centraliza verticalmente */
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #f5f5f5;
-  background-image: url('../assets/plano-de-fundo.png');
-  background-repeat: no-repeat; /* evita duplicação */
-  background-size: cover; /* faz a imagem cobrir toda a tela */
+
+  /* Imagem de fundo */
+  background-image: url("../assets/plano-de-fundo.png");
+  background-repeat: no-repeat; /* evita repetição */
+  background-size: cover; /* cobre toda a tela */
 }
 
-.form-container{
-  background-color: rgb(61 106 165 / 40%); /* fundo azul com opacidade */
+/* Container principal do formulário */
+.form-container {
+  background-color: rgb(61 106 165 / 40%); /* azul com transparência */
   padding: 20px;
   border-radius: 40px;
   width: 400px;
-  transform: translate(-13%, 0%);
+  transform: translate(-13%, 0%); /* ajuste manual da posição do formulário horizontalmente */
 }
 
-.logo-image{
-  border-radius: 15px; 
-  cursor: pointer; 
+/* Logo */
+.logo-image {
+  border-radius: 15px;
+  cursor: pointer; /* muda o cursor do mouse para uma mão */
 }
 
-.main-title{
-  color: #ffff;
-  margin: 30px 0 30px 0;
+/* Título principal */
+.main-title {
+  color: #fff;
+  margin: 30px 0;
 }
 
+/* Formulário */
 .form-signin {
   width: 100%;
   max-width: 330px;
   padding: 15px;
-  margin: auto;
+  margin: auto; /* centraliza horizontalmente */
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
+/* Inputs padrão */
 .form-control {
   margin-bottom: 20px;
-  box-sizing: border-box;
 }
 
-#input-email{
-  margin-bottom: 30px;
-}
-
-.fa-eye { 
-    cursor: pointer;
-    font-size: 20px;
-    color: #808080;
-}
-
+/* Ícones de olho (mostrar senha) */
+.fa-eye,
 .fa-eye-slash {
-    cursor: pointer;
-    font-size: 20px;
-    color: #808080;
-    display: none; /* inicialmente escondido */
+  cursor: pointer;
+  font-size: 20px;
+  color: #808080;
 }
 
+/* Ícone "olho fechado" começa escondido */
+.fa-eye-slash {
+  display: none;
+}
+
+/* Caixa que posiciona o ícone dentro do input */
 .eye-box {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;          
+  width: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Remove estilo padrão ao focar input */
 input.form-control:focus {
-  outline: none; /* remove a borda de foco padrão */
-  box-shadow: none; /* remove a sombra padrão */
-  border-color: #e6e6e6; 
+  outline: none;
+  box-shadow: none;
+  border-color: #e6e6e6;
 }
 
+/* Container do checkbox + link */
 .container-checkbox {
   display: flex;
-  justify-content: space-around; /* espaça checkbox e link de recuperação */
+  justify-content: space-around;
 }
 
-.checkbox-remember-login{
-  color: #ffff;
+/* Estilo do checkbox com texto */
+.checkbox-remember-login {
+  color: #fff;
   display: flex;
   justify-content: center;
-  align-items: center; /* alinha checkbox e texto na mesma linha */
+  align-items: center;
   gap: 6px; /* espaço entre checkbox e texto */
   margin-bottom: 20px;
   font-weight: 600;
 }
 
+/* Tamanho do checkbox */
 #remember-me {
-  width: 16px; 
+  width: 16px;
   height: 16px;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-.recover-password a{
-  text-decoration: none;
+/* Link "esqueci senha" */
+.recover-password a {
+  text-decoration: none; /* Tira o sublinhado do link*/
   color: #145ad7;
   font-weight: 600;
 }
 
+/* Hover do link */
 .recover-password a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Adiciona sublinhado do link ao passar o cursor */
 }
 
+/* Botão entrar */
 .btn-primary {
   font-weight: 500;
-  transition: 0.2s; /* transição suave para hover */
+  transition: 0.2s; /* animação suave */
   margin-top: 10px;
 }
 
+/* Efeito hover do botão */
 .btn-primary:hover {
-  opacity: 0.9; /* leve efeito de transparência */
-  transform: translateY(-2px); /* leve elevação para cima no botão */
+  opacity: 0.9;
+  transform: translateY(-2px); /* efeito de "levantar" */
 }
 
-.text-muted{
-  margin: 30px 0 30px 0;
+/* Texto inferior */
+.text-muted {
+  margin: 30px 0;
 }
 
+/* Destaque dentro do texto */
 .text-muted span {
-  color: #ffff; 
+  color: #fff;
   font-weight: 500;
 }
 
+/* Animação da notificação (queda + leve bounce) */
 @keyframes cairNotificacao {
   0% {
-    transform: translate(-50%, -80px); /*50% centraliza na horizontal, -80% joga pra cima (fora da posição)*/
-    opacity: 0; /*Deixa invisível*/
+    transform: translate(-50%, -80px); /* começa acima */
+    opacity: 0; /* invisível */
   }
   70% {
-    transform: translate(-50%, 10px); /* leve bounce */
+    transform: translate(-50%, 10px); /* passa um pouco (bounce) */
   }
   100% {
-    transform: translate(-50%, 0);
-    opacity: 1;
+    transform: translate(-50%, 0); /* posição final */
+    opacity: 1; /* visível */
   }
 }
-
-

@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>Tela de Login</title>
 
@@ -79,6 +78,7 @@
             <input id="remember-me" type="checkbox" />
             <span>Lembre-Me</span>
           </div>
+          <!-- Link "Esqueci minha senha" -->
           <div class="recover-password">
             <span><a href="#">Esqueci minha senha</a></span>
           </div>
@@ -158,9 +158,16 @@
     </main>
   </body>
 
+  <!-- Biblioteca principal do jQuery (Necessária para o Notify funcionar) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Plugin Notify.js (Usado para criar notificações visuais) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+
+  <!-- Script do FAQ (Controla abrir/fechar perguntas) -->
   <script src="./js/faq.js"></script>
+
+  <!-- Script do formulário (validação, notify, senha, etc.) -->
   <script src="./js/formulario.js"></script>
 </html>
 
