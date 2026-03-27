@@ -35,8 +35,8 @@ https://github.com/user-attachments/assets/94da2d02-2571-4f58-a876-1f275ca8b655
 
 <h2>✔️ Tecnologias Utilizadas</h2>
 
-- `HTML`: Responsável pela estruturação da página, organizando os elementos e criando os containers para exibição dos produtos.
-- `CSS`: Utilizado para estilização da interface, incluindo layout, cores, tipografia e organização visual da listagem de produtos.
+- `HTML`: Responsável pela estruturação da tela de login, organizando os campos de entrada (e-mail e senha), botões e demais elementos da interface.
+- `CSS`: Utilizado para estilização da página de login, definindo layout, cores, tipografia e garantindo uma interface visual agradável e intuitiva para o usuário.
 - `JavaScript`: Responsável pela interatividade da página, como validação de formulários, exibição de notificações, manipulação do DOM e controle de funcionalidades dinâmicas (ex: mostrar/ocultar senha e FAQ).
 - `Bootstrap`: Framework utilizado para agilizar o desenvolvimento, oferecendo componentes prontos, responsividade e padronização do layout.
 
